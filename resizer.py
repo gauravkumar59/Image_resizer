@@ -19,7 +19,7 @@ if uploaded_file is not None:
     image_rgb =cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
     st.subheader("Original Image")
-    st.image(image_rgb, caption="Original Image", use_column_width=True)
+    st.image(image_rgb, caption="Original Image", use_container_width=True)
 
     # Get original dimensions
     original_height, original_width = image.shape[:2]
@@ -35,7 +35,7 @@ if uploaded_file is not None:
         resized_rgb = cv2.cvtColor(resized_image, cv2.COLOR_BGR2RGB)
 
         st.subheader("Resized Image")
-        st.image(resized_rgb, caption="Resized Image", use_column_width=True)
+        st.image(resized_rgb, caption="Resized Image", use_container_width=True)
 
         # Convert to downloadable format
         pil_img = Image.fromarray(resized_rgb)
